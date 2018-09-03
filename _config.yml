@@ -10,7 +10,7 @@ title:            Matt Hall
 tagline:          'A Jekyll theme'
 description:      Designer & developer. Student at <a href="https://osu.edu">OSU</a>. Built <a href="https://github.com/halltech/Beacon">Beacon</a> and <a href="https://github.com/mh15/unsure">Unsure</a>.
 url:              https://mh15.github.io/matthall
-baseurl:          /matthall
+baseurl:          /
 
 author:
   name:           'Matt Hall'
