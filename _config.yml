@@ -8,7 +8,7 @@ permalink:        /:year/:month/:day/:title/
 # Setup
 title:            Matt Hall
 tagline:          'A Jekyll theme'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+description:      Designer & developer. Student at <a href="https://osu.edu">OSU</a>. Built <a href="https://github.com/halltech/Beacon">Beacon</a> and <a href="https://github.com/mh15/unsure">Unsure</a>.
 url:              https://mh15.github.io/matthall
 baseurl:          /matthall
 
@@ -19,9 +19,13 @@ author:
 paginate:         5
 
 # Custom vars
-version:          2.1.0
+version:          0.1.0
 
 github:
   repo:           https://github.com/poole/hyde
+  account:        https://github.com/mh15
 
 repository: matthall/mh15.github.io
+
+
+gems: [jekyll-paginate]

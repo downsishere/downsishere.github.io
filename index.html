@@ -12,9 +12,15 @@ title: Home
       </a>
     </h1>
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
+    {% include  article-meta.html content=post.content date=post.date %}
 
-    {{ post.content }}
+    {% if post.content contains '<!--break-->' %}
+      {{ post.content | split:'<!--break-->' | first }}
+    {% else %}
+      {{ post.content | truncatewords:150 }}
+    {% endif %}
+    <a href="{{ site.baseurl | append:post.url }}">read more</a>
+
   </div>
   {% endfor %}
 </div>
