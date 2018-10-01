@@ -11,7 +11,7 @@
 
   <title>
     
-      Google Search &middot; Matt Hall
+      Computer Science Post &middot; Matt Hall
     
   </title>
 
@@ -46,7 +46,7 @@
 </head>
 
 
-  <body class="search">
+  <body class="post">
 
     <div id="sidebar">
   <header>
@@ -232,25 +232,97 @@
 
     <main class="container">
       <header>
-  <h1 class="page-title"><label for="search-bar">Google Search</label></h1>
+  <h1 class="post-title">Computer Science Post</h1>
 </header>
 <div class="content">
-  <form action="https://google.com/search" class="search-form">
-  <div class="search-row">
-    <input id="search-bar" type="search" name="q" />
+  <div class="post-meta">
+  <span class="post-date">01 Oct 2018</span>
+  <span class="post-categories">
+    
+      &bull;
 
-    
-    
-    
-    
-    
-    <input name="sitesearch" type="hidden"
-           value="localhost:4000/hydeout" />
+      
+      
+      
 
-    <input type="submit" value="Search" />
-  </div>
-</form>
+      
+        <a href="/hydeout/category/computer-science.html">
+          Computer Science
+        </a>
+      
+    
+  </span>
 </div>
+
+
+  <div class="post-body">
+    <p>Here’s some text mollit nostrud eiusmod cupidatat officia et magna fugiat qui cupidatat consectetur voluptate quis ad adipisicing irure excepteur do voluptate pariatur sit voluptate ad sunt.</p>
+
+    
+
+
+
+<div class="post-tags">
+  
+</div>
+  </div>
+
+  
+  <section class="comments">
+    <h2>Comments</h2>
+    
+  <div id="disqus_thread">
+    <button class="disqus-load" onClick="loadDisqusComments()">
+      Load Comments
+    </button>
+  </div>
+  <script>
+
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW
+  *  TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT:s
+  *  https://disqus.com/admin/universalcode/#configuration-variables
+  */
+  var disqus_config = function () {
+    this.page.url = "http://localhost:4000/hydeout/computer%20science/2018/10/01/computers.html";
+    this.page.identifier = "" ||
+                           "http://localhost:4000/hydeout/computer%20science/2018/10/01/computers.html";
+  }
+  function loadDisqusComments() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//mh15.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+  </script>
+  <noscript>
+    Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus</a>.
+  </noscript>
+
+
+
+  </section>
+
+  <section class="related">
+  <h2>Related Posts</h2>
+  <ul class="posts-list">
+    
+      <li>
+        <h3>
+          <a href="/hydeout/politics/2018/10/01/political.html">
+            Politics Post
+            <small>01 Oct 2018</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</section>
+
+</div>
+
     </main>
 
     <!-- Optional footer content -->

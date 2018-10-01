@@ -7,7 +7,7 @@ title:            Matt Hall
 tagline:          'Designer & Developer'
 description:      'Designer & developer. Student at <a href="https://osu.edu">OSU</a>. Built <a href="https://github.com/halltech/Beacon">Beacon</a> and <a href="https://github.com/mh15/unsure">Unsure</a>.'
 url:              https://mh15.github.io/matthall
-baseurl:          '/'
+baseurl:          '/hydeout'
                   # the optional subpath of your site, e.g. "/blog"
                   # NB: This applies to all pages in your Jekyll site.
                   # If you want to move just the blog index pages but keep

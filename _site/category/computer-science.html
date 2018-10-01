@@ -11,7 +11,7 @@
 
   <title>
     
-      Google Search &middot; Matt Hall
+      Computer Science &middot; Matt Hall
     
   </title>
 
@@ -46,7 +46,7 @@
 </head>
 
 
-  <body class="search">
+  <body class="category">
 
     <div id="sidebar">
   <header>
@@ -126,7 +126,7 @@
 
   
     
-      <a class="category-link "
+      <a class="category-link  active"
           href="/hydeout/category/computer-science.html">Computer Science</a>
     
   
@@ -232,25 +232,49 @@
 
     <main class="container">
       <header>
-  <h1 class="page-title"><label for="search-bar">Google Search</label></h1>
+  <h1 class="page-title">Computer Science</h1>
 </header>
 <div class="content">
-  <form action="https://google.com/search" class="search-form">
-  <div class="search-row">
-    <input id="search-bar" type="search" name="q" />
+  
+  <p>Sample category page. You need to create a page for each category.
+The category is inferred from the title of the page, but you can also
+specify it with the <code class="highlighter-rouge">category</code> attribute in the front matter.</p>
 
-    
-    
-    
-    
-    
-    <input name="sitesearch" type="hidden"
-           value="localhost:4000/hydeout" />
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">category</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">My Category</span>
+<span class="nn">---</span>
+</code></pre></div></div>
 
-    <input type="submit" value="Search" />
-  </div>
-</form>
+<p>Or …</p>
+
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">category</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Fancy Title</span>
+<span class="na">category</span><span class="pi">:</span> <span class="s">My Category</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<p>Posts get listed below here.</p>
+
+
+
+<ul class="posts-list">
+  
+  
+    <li>
+      <h3>
+        <a href="/hydeout/computer%20science/2018/10/01/computers.html">
+          Computer Science Post
+          <small>01 Oct 2018</small>
+        </a>
+      </h3>
+    </li>
+  
+</ul>
+
 </div>
+
     </main>
 
     <!-- Optional footer content -->
