@@ -827,3 +827,15 @@ button.disqus-load {
   .posts-for-tag:target {
     display: block;
     animation: posts-for-tag-fade-in 0.6s ease-in-out; }
+
+img[alt=image] {
+  width: 50%;
+  min-width: 400px;
+  margin: 0 auto; }
+
+p.post-time {
+  padding-top: 5px;
+  margin-bottom: 0 !important; }
+
+.container > header {
+  margin-bottom: 1rem !important; }

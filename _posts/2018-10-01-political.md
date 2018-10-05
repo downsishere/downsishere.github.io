@@ -1,6 +1,8 @@
 ---
 layout: post
+published: false
 title: Politics Post
+author: matt
 excerpt_separator:  <!--more-->
 category: Politics
 ---

@@ -9,3 +9,19 @@ $layout-reverse: false !default;
 $link-color: #268bd2 !default;
 
 @import "hydeout";
+
+
+img[alt=image] {
+	width: 50%;
+	min-width: 400px;
+	margin: 0 auto;
+}
+
+p.post-time {
+	padding-top: 5px;
+	margin-bottom: 0 !important;
+}
+
+.container > header {
+	margin-bottom: 1rem !important;
+}

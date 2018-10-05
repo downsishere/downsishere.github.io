@@ -11,7 +11,7 @@
 
   <title>
     
-      About &middot; Matt Hall
+      Projects &middot; Matt Hall
     
   </title>
 
@@ -46,7 +46,7 @@
 </head>
 
 
-  <body class="page">
+  <body class="category">
 
     <div id="sidebar">
   <header>
@@ -79,7 +79,7 @@
 
   
     
-      <a class="page-link  active"
+      <a class="page-link "
           href="/hydeout/about.html">About</a>
     
   
@@ -165,7 +165,7 @@
 
   
     
-      <a class="category-link "
+      <a class="category-link  active"
           href="/hydeout/category/projects.html">Projects</a>
     
   
@@ -275,14 +275,37 @@
 
     <main class="container">
       <header>
-  <h1 class="page-title">About</h1>
+  <h1 class="page-title">Projects</h1>
 </header>
 <div class="content">
-  <p>Hello! I’m Matt Hall, a freshman Computer Science and Engineering major at The Ohio State University. Through my projects I’m working to develop skills and understanding in the fields that shape our future.</p>
+  
+  <p>Sample category page. You need to create a page for each category.
+The category is inferred from the title of the page, but you can also
+specify it with the <code class="highlighter-rouge">category</code> attribute in the front matter.</p>
 
-<p><img src="http://localhost:4000/hydeout/assets/img/matthall.jpg" alt="image" /></p>
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">category</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">My Category</span>
+<span class="nn">---</span>
+</code></pre></div></div>
 
-<p>I’ve interned at the <a href="https://www.wpafb.af.mil/AFRL/">Air Force Research Lab</a> researching fuel-cooled avionics systems and developed software to validate thermal controls models. My team designed and built both the <a href="https://github.com/halltech/beacon">Beacon 3D Printer</a> and an <a href="https://github.com/halltech/beacon/blob/master/Research.md">Industrial Large-Format 3D Printer</a>. I’m currently working with the Ohio State University <a href="https://ecocar.osu.edu">EcoCAR</a> team on Connected and Autonomated Vehicle technologies.</p>
+<p>Or …</p>
+
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">category</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Fancy Title</span>
+<span class="na">category</span><span class="pi">:</span> <span class="s">My Category</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<p>Posts get listed below here.</p>
+
+
+
+<ul class="posts-list">
+  
+  
+</ul>
 
 </div>
 
