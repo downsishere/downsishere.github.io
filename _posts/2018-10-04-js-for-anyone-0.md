@@ -19,12 +19,12 @@ This tutorial is written for someone with no programming experience- yet as the 
 
 <!--more-->
 
-# Contents
+# Series Contents
 
 Throughout these tutorials I'd like to cover a few things:
 
 1. [Thinking About Memory](/Computer Science/2018/10/04/js-for-anyone-0) (variables, assigment, operators)
-2. Making Decisions (comparison, booleans, control flow)
+2. [Making Decisions](/Computer Science/2018/10/04/js-for-anyone-1) (comparison, booleans, control flow)
 3. Repeating (loops, functions)
 4. Beginning Node.js (coming soon)
 5. Syntax (coming soon)
@@ -32,12 +32,11 @@ Throughout these tutorials I'd like to cover a few things:
 
 Access all of the tutorials as they are published [here](tags.html#js-for-anyone).
 
-# Table of Contents
+# In This Post
 
 - [Remembering with `variables`](#variables)
 - [Math with `operators`](#operators)
-- [Working with `assignment`](#assignment)
-- [Finding a `function`](#function)
+- [Working with assignment](#assignment)
 
 # Let's Begin
 
@@ -110,7 +109,7 @@ So that's neat. But we still don't know how to change the value that we previous
 
 <a name="assignment"></a>
 
-## Working with `assignment`
+## Working with assignment
 
 So we talked for a while about the logical, unique identifiers and values of variables but never explicity created them. By convention, the `=` symbol (equals sign) denotes the assigment of a value to a logical, unique identifier. Everything to the left of `=` is the identifier and everything to the right is the value.
 
@@ -157,7 +156,7 @@ As you see, we can assign the value from one variable to any other variable. We 
 
 ## Conclusion
 
-That's all for this section. We've learned (at a high level) how computers remember, access, and edit values. We've covered operators and how they can be used to manipulate the (numerical) values of a given variable. The [next post](/Computer Science/2018/10/04/js-for-anyone-1) will discuss how computers compare variables, make decisions, and finally introduce the logic behind Booleans.
+That's all for this section. We've learned (at a high level) how computers remember, access, and edit values. We've covered operators and how they can be used to manipulate the (numerical) values of a given variable. The [next post](/Computer Science/2018/10/04/js-for-anyone-1) will discuss how computer programs compare variables, introduce Boolean logic, and talk about how to make decisions.
 
 
 
