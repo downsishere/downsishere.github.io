@@ -156,7 +156,7 @@ As you see, we can assign the value from one variable to any other variable. We 
 
 ## Conclusion
 
-That's all for this section. We've learned (at a high level) how computers remember, access, and edit values. We've covered operators and how they can be used to manipulate the (numerical) values of a given variable. The [next post](/computer science/2018/10/04/js-for-anyone-1) will discuss how computer programs compare variables, introduce Boolean logic, and talk about how to make decisions.
+That's all for this section. We've learned (at a high level) how computers remember, access, and edit values. We've covered operators and how they can be used to manipulate the (numerical) values of a given variable. The [next post](/computer science/2018/10/17/js-for-anyone-1) will discuss how computer programs compare variables, introduce Boolean logic, and talk about how to make decisions.
 
 
 
