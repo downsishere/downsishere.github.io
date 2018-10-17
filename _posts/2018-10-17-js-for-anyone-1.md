@@ -14,8 +14,6 @@ tags:
 
 This is a continuation of the [JavaScript For Anyone](tags.html#js-for-anyone) tutorial. In this post we will discuss how computer programs compare variables, introduce Boolean logic, and talk about how to make decisions.
 
-https://matthall.ml/computer%20science/2018/10/04/js-for-anyone-0.html
-
 
 
 <!--more-->

@@ -24,7 +24,7 @@ This tutorial is written for someone with no programming experience- yet as the 
 Throughout these tutorials I'd like to cover a few things:
 
 1. [Thinking About Memory](/computer science/2018/10/04/js-for-anyone-0) (variables, assigment, operators)
-2. [Making Decisions](/computer science/2018/10/04/js-for-anyone-1) (comparison, booleans, control flow)
+2. [Making Decisions](/computer science/2018/10/17/js-for-anyone-1) (comparison, booleans, control flow)
 3. Repeating (loops, functions)
 4. Beginning Node.js (coming soon)
 5. Syntax (coming soon)
