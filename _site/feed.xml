@@ -1,4 +1,163 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/hydeout/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/hydeout/" rel="alternate" type="text/html" /><updated>2018-10-06T14:39:24-04:00</updated><id>http://localhost:4000/hydeout/feed.xml</id><title type="html">Matt Hall</title><subtitle>Designer &amp; developer. Student at &lt;a href=&quot;https://osu.edu&quot;&gt;OSU&lt;/a&gt;. Built &lt;a href=&quot;https://github.com/halltech/Beacon&quot;&gt;Beacon&lt;/a&gt; and &lt;a href=&quot;https://github.com/mh15/unsure&quot;&gt;Unsure&lt;/a&gt;.</subtitle><author><name>Matt Hall</name></author><entry><title type="html">Thinking About Memory</title><link href="http://localhost:4000/hydeout/computer%20science/2018/10/04/js-for-anyone-0.html" rel="alternate" type="text/html" title="Thinking About Memory" /><published>2018-10-04T00:00:00-04:00</published><updated>2018-10-04T00:00:00-04:00</updated><id>http://localhost:4000/hydeout/computer%20science/2018/10/04/js-for-anyone-0</id><content type="html" xml:base="http://localhost:4000/hydeout/computer%20science/2018/10/04/js-for-anyone-0.html">&lt;p&gt;Teaching always seems to help me solidify my understanding of any concept. Also, I work and study with Engineers whose programming education consists of reading the Matlab documentation.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/hydeout/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/hydeout/" rel="alternate" type="text/html" /><updated>2018-10-09T18:13:59-04:00</updated><id>http://localhost:4000/hydeout/feed.xml</id><title type="html">Matt Hall</title><subtitle>Designer &amp; developer. Student at &lt;a href=&quot;https://osu.edu&quot;&gt;OSU&lt;/a&gt;. Built &lt;a href=&quot;https://github.com/halltech/Beacon&quot;&gt;Beacon&lt;/a&gt; and &lt;a href=&quot;https://github.com/mh15/unsure&quot;&gt;Unsure&lt;/a&gt;.</subtitle><author><name>Matt Hall</name></author><entry><title type="html">Making Decisions</title><link href="http://localhost:4000/hydeout/computer%20science/2018/10/06/js-for-anyone-1.html" rel="alternate" type="text/html" title="Making Decisions" /><published>2018-10-06T00:00:00-04:00</published><updated>2018-10-06T00:00:00-04:00</updated><id>http://localhost:4000/hydeout/computer%20science/2018/10/06/js-for-anyone-1</id><content type="html" xml:base="http://localhost:4000/hydeout/computer%20science/2018/10/06/js-for-anyone-1.html">&lt;p&gt;This is a continuation of the &lt;a href=&quot;tags.html#js-for-anyone&quot;&gt;JavaScript For Anyone&lt;/a&gt; tutorial. In this post we will discuss how computer programs compare variables, introduce Boolean logic, and talk about how to make decisions.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h1 id=&quot;series-contents&quot;&gt;Series Contents&lt;/h1&gt;
+
+&lt;p&gt;Throughout these tutorials I’d like to cover a few things:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;/Computer Science/2018/10/04/js-for-anyone-0&quot;&gt;Thinking About Memory&lt;/a&gt; (variables, assigment, operators)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/Computer Science/2018/10/04/js-for-anyone-1&quot;&gt;Making Decisions&lt;/a&gt; (comparison, booleans, control flow)&lt;/li&gt;
+  &lt;li&gt;Repeating (loops, functions)&lt;/li&gt;
+  &lt;li&gt;Beginning Node.js (coming soon)&lt;/li&gt;
+  &lt;li&gt;Syntax (coming soon)&lt;/li&gt;
+  &lt;li&gt;Projects (coming soon)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Access all of the tutorials as they are published &lt;a href=&quot;tags.html#js-for-anyone&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;in-this-post&quot;&gt;In This Post&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#comparing&quot;&gt;Comparing variables and values&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#booleans&quot;&gt;The truth of the Boolean&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#control&quot;&gt;Control flow&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#blocks&quot;&gt;Building Blocks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a name=&quot;#comparing&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;comparing-variables-and-values&quot;&gt;Comparing Variables and Values&lt;/h2&gt;
+
+&lt;p&gt;In the previous post we learned how to conceptualize the creation and editing of variables. So, say we have two variables, &lt;code class=&quot;highlighter-rouge&quot;&gt;freedom tower floors = 104&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;empire state building floors = 102&lt;/code&gt;. A program can compare two values by using &lt;em&gt;relational&lt;/em&gt; operators.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;symbol&lt;/th&gt;
+      &lt;th&gt;name&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;gt;&lt;/td&gt;
+      &lt;td&gt;greater than&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;lt;&lt;/td&gt;
+      &lt;td&gt;less than&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;gt;=&lt;/td&gt;
+      &lt;td&gt;greater than or equal to&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;lt;=&lt;/td&gt;
+      &lt;td&gt;less than or equal to&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;==&lt;/td&gt;
+      &lt;td&gt;equal to&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;!=&lt;/td&gt;
+      &lt;td&gt;not equal to&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Notice how programming languages use both &lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt;, yet the do not mean the same thing. We assign values using &lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt; while we can check if a variable’s value is equal to another value by using &lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt; (or &lt;code class=&quot;highlighter-rouge&quot;&gt;!=&lt;/code&gt;).&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;It’s important to realize that these comparisons work for all types of values such as text, numbers, etc. However, it doesn’t make much sense to say a word is greater than or less than another word so just don’t use &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;=&lt;/code&gt;, or &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;=&lt;/code&gt; on text.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;There isn’t really anything we can do with these relational operators until we talk about another key concept of programming: Booleans.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;booleans&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;the-truth-of-the-boolean&quot;&gt;The truth of the Boolean&lt;/h2&gt;
+
+&lt;p&gt;There’s another type of value that a variable can be assigned- a &lt;a href=&quot;https://en.wikipedia.org/wiki/Boolean_data_type&quot;&gt;boolean&lt;/a&gt;. Booleans may have only two possible values, &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt;. You can probably see uses for this in for programs &amp;amp; algorithims as it allows for the programmer to control &lt;strong&gt;if&lt;/strong&gt; an action should occur. In most programming languages, the &lt;a href=&quot;#comparing&quot;&gt;relational operators&lt;/a&gt; discussed above evaluate to a boolean value. See the examples below, using the sample variables given above the table:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;size = 4&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;squared = 144&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;test = 13&lt;/code&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;expression&lt;/th&gt;
+      &lt;th&gt;boolean&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;size &amp;gt; 5&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;56 &amp;gt;= 7&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;(squared / 12) == 12&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;test&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;167 &amp;lt; 189&lt;/td&gt;
+      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;174 != squared&lt;/td&gt;
+      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;squared&lt;/td&gt;
+      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;test = 13&lt;/td&gt;
+      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Most of these examples seem pretty straight forward. But why does just &lt;code class=&quot;highlighter-rouge&quot;&gt;test&lt;/code&gt; evaluate to &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt;? It turns out Booleans are extra handy- then can tell us if a variable exists! This is very useful behavior when working with a large codebase or code that someone might change without you knowing.&lt;/p&gt;
+
+&lt;p&gt;So, now that we have the capability to &lt;a href=&quot;#comparison&quot;&gt;compare&lt;/a&gt; the values of our &lt;a href=&quot;/computer%20science/2018/10/04/js-for-anyone-0.html#variables&quot;&gt;variables&lt;/a&gt; with relational operators we need a way to tell our program which way to go.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;control&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;##Control Flow&lt;/p&gt;
+
+&lt;p&gt;So let’s say that we have an algorithim that tells us to subtract 1 from a value if it the value is greater than 10. Using only the concepts introduced in the previous sections this is impossible- but we are close. To control the way a program evaluates, we’ll use the &lt;code class=&quot;highlighter-rouge&quot;&gt;if&lt;/code&gt; command. Here’s an example below:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;So that’s a lot of new stuff right there. We already knew how to assign the value &lt;code class=&quot;highlighter-rouge&quot;&gt;11&lt;/code&gt; to the logical, unique identifier &lt;code class=&quot;highlighter-rouge&quot;&gt;number&lt;/code&gt;. We also know how to reassign the value to a different value, essentially subtracting &lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt; from &lt;code class=&quot;highlighter-rouge&quot;&gt;number&lt;/code&gt;. The &lt;code class=&quot;highlighter-rouge&quot;&gt;if&lt;/code&gt; command is a bit different, however. Follow the specification below to try and write a similar algorithim to multiply a value by 7 if it is greater than 4:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;comparison&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;something&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;textarea&gt;
+
+
+
+&lt;/textarea&gt;</content><author><name>Matt Hall</name><email>matthew349hall@hotmail.com</email></author><category term="Computer Science" /><category term="js for anyone" /><category term="tutorial" /><summary type="html">This is a continuation of the JavaScript For Anyone tutorial. In this post we will discuss how computer programs compare variables, introduce Boolean logic, and talk about how to make decisions.</summary></entry><entry><title type="html">Thinking About Memory</title><link href="http://localhost:4000/hydeout/computer%20science/2018/10/04/js-for-anyone-0.html" rel="alternate" type="text/html" title="Thinking About Memory" /><published>2018-10-04T00:00:00-04:00</published><updated>2018-10-04T00:00:00-04:00</updated><id>http://localhost:4000/hydeout/computer%20science/2018/10/04/js-for-anyone-0</id><content type="html" xml:base="http://localhost:4000/hydeout/computer%20science/2018/10/04/js-for-anyone-0.html">&lt;p&gt;Teaching always seems to help me solidify my understanding of any concept. Also, I work and study with Engineers whose programming education consists of reading the Matlab documentation.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;I’ve chosen JavaScript as the language of choice for this set of tutorials, specifically &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt;. While &lt;a href=&quot;https://hackernoon.com/the-javascript-phenomenon-is-a-mass-psychosis-57adebb09359&quot;&gt;plenty&lt;/a&gt; of &lt;a href=&quot;https://medium.com/javascript-non-grata/the-top-10-things-wrong-with-javascript-58f440d6b3d8&quot;&gt;valid&lt;/a&gt; &lt;a href=&quot;https://medium.com/javascript-non-grata/javascript-is-a-dysfunctional-programming-language-a1f4866e186f&quot;&gt;criticism&lt;/a&gt; of JavaScript exists, it’s not &lt;a href=&quot;https://hackernoon.com/javascript-a-first-class-language-at-last-209376f69731&quot;&gt;that&lt;/a&gt; bad. After all, JavaScript is the most popular language on &lt;a href=&quot;https://octoverse.github.com&quot;&gt;GitHub&lt;/a&gt; by a long shot.&lt;/p&gt;
@@ -288,163 +447,4 @@
 
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 
-&lt;p&gt;That’s all for this section. We’ve learned (at a high level) how computers remember, access, and edit values. We’ve covered operators and how they can be used to manipulate the (numerical) values of a given variable. The &lt;a href=&quot;/Computer Science/2018/10/04/js-for-anyone-1&quot;&gt;next post&lt;/a&gt; will discuss how computer programs compare variables, introduce Boolean logic, and talk about how to make decisions.&lt;/p&gt;</content><author><name>Matt Hall</name><email>matthew349hall@hotmail.com</email></author><category term="Computer Science" /><category term="js for anyone" /><category term="tutorial" /><summary type="html">Teaching always seems to help me solidify my understanding of any concept. Also, I work and study with Engineers whose programming education consists of reading the Matlab documentation. I’ve chosen JavaScript as the language of choice for this set of tutorials, specifically Node.js. While plenty of valid criticism of JavaScript exists, it’s not that bad. After all, JavaScript is the most popular language on GitHub by a long shot. This tutorial is written for someone with no programming experience- yet as the target demographic is my college peers, I’m assuming the level of logic and problem-solving skills supposedly present in engineering majors.</summary></entry><entry><title type="html">Making Decisions</title><link href="http://localhost:4000/hydeout/computer%20science/2018/10/04/js-for-anyone-1.html" rel="alternate" type="text/html" title="Making Decisions" /><published>2018-10-04T00:00:00-04:00</published><updated>2018-10-04T00:00:00-04:00</updated><id>http://localhost:4000/hydeout/computer%20science/2018/10/04/js-for-anyone-1</id><content type="html" xml:base="http://localhost:4000/hydeout/computer%20science/2018/10/04/js-for-anyone-1.html">&lt;p&gt;This is a continuation of the &lt;a href=&quot;tags.html#js-for-anyone&quot;&gt;JavaScript For Anyone&lt;/a&gt; tutorial. In this post we will discuss how computer programs compare variables, introduce Boolean logic, and talk about how to make decisions.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h1 id=&quot;series-contents&quot;&gt;Series Contents&lt;/h1&gt;
-
-&lt;p&gt;Throughout these tutorials I’d like to cover a few things:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;/Computer Science/2018/10/04/js-for-anyone-0&quot;&gt;Thinking About Memory&lt;/a&gt; (variables, assigment, operators)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/Computer Science/2018/10/04/js-for-anyone-1&quot;&gt;Making Decisions&lt;/a&gt; (comparison, booleans, control flow)&lt;/li&gt;
-  &lt;li&gt;Repeating (loops, functions)&lt;/li&gt;
-  &lt;li&gt;Beginning Node.js (coming soon)&lt;/li&gt;
-  &lt;li&gt;Syntax (coming soon)&lt;/li&gt;
-  &lt;li&gt;Projects (coming soon)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Access all of the tutorials as they are published &lt;a href=&quot;tags.html#js-for-anyone&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h1 id=&quot;in-this-post&quot;&gt;In This Post&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;#comparing&quot;&gt;Comparing variables and values&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#booleans&quot;&gt;The truth of the Boolean&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#control&quot;&gt;Control flow&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#blocks&quot;&gt;Building Blocks&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a name=&quot;#comparing&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;comparing-variables-and-values&quot;&gt;Comparing Variables and Values&lt;/h2&gt;
-
-&lt;p&gt;In the previous post we learned how to conceptualize the creation and editing of variables. So, say we have two variables, &lt;code class=&quot;highlighter-rouge&quot;&gt;freedom tower floors = 104&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;empire state building floors = 102&lt;/code&gt;. A program can compare two values by using &lt;em&gt;relational&lt;/em&gt; operators.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;symbol&lt;/th&gt;
-      &lt;th&gt;name&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&amp;gt;&lt;/td&gt;
-      &lt;td&gt;greater than&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&amp;lt;&lt;/td&gt;
-      &lt;td&gt;less than&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&amp;gt;=&lt;/td&gt;
-      &lt;td&gt;greater than or equal to&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&amp;lt;=&lt;/td&gt;
-      &lt;td&gt;less than or equal to&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;==&lt;/td&gt;
-      &lt;td&gt;equal to&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;!=&lt;/td&gt;
-      &lt;td&gt;not equal to&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Notice how programming languages use both &lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt;, yet the do not mean the same thing. We assign values using &lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt; while we can check if a variable’s value is equal to another value by using &lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt; (or &lt;code class=&quot;highlighter-rouge&quot;&gt;!=&lt;/code&gt;).&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;It’s important to realize that these comparisons work for all types of values such as text, numbers, etc. However, it doesn’t make much sense to say a word is greater than or less than another word so just don’t use &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;=&lt;/code&gt;, or &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;=&lt;/code&gt; on text.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;There isn’t really anything we can do with these relational operators until we talk about another key concept of programming: Booleans.&lt;/p&gt;
-
-&lt;p&gt;&lt;a name=&quot;booleans&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;the-truth-of-the-boolean&quot;&gt;The truth of the Boolean&lt;/h2&gt;
-
-&lt;p&gt;There’s another type of value that a variable can be assigned- a &lt;a href=&quot;https://en.wikipedia.org/wiki/Boolean_data_type&quot;&gt;boolean&lt;/a&gt;. Booleans may have only two possible values, &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt;. You can probably see uses for this in for programs &amp;amp; algorithims as it allows for the programmer to control &lt;strong&gt;if&lt;/strong&gt; an action should occur. In most programming languages, the &lt;a href=&quot;#comparing&quot;&gt;relational operators&lt;/a&gt; discussed above evaluate to a boolean value. See the examples below, using the sample variables given above the table:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;size = 4&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;squared = 144&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;test = 13&lt;/code&gt;&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;expression&lt;/th&gt;
-      &lt;th&gt;boolean&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;size &amp;gt; 5&lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;56 &amp;gt;= 7&lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;(squared / 12) == 12&lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;test&lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;167 &amp;lt; 189&lt;/td&gt;
-      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;174 != squared&lt;/td&gt;
-      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;squared&lt;/td&gt;
-      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;test = 13&lt;/td&gt;
-      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Most of these examples seem pretty straight forward. But why does just &lt;code class=&quot;highlighter-rouge&quot;&gt;test&lt;/code&gt; evaluate to &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt;? It turns out Booleans are extra handy- then can tell us if a variable exists! This is very useful behavior when working with a large codebase or code that someone might change without you knowing.&lt;/p&gt;
-
-&lt;p&gt;So, now that we have the capability to &lt;a href=&quot;#comparison&quot;&gt;compare&lt;/a&gt; the values of our &lt;a href=&quot;/computer%20science/2018/10/04/js-for-anyone-0.html#variables&quot;&gt;variables&lt;/a&gt; with relational operators we need a way to tell our program which way to go.&lt;/p&gt;
-
-&lt;p&gt;&lt;a name=&quot;control&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;##Control Flow&lt;/p&gt;
-
-&lt;p&gt;So let’s say that we have an algorithim that tells us to subtract 1 from a value if it the value is greater than 10. Using only the concepts introduced in the previous sections this is impossible- but we are close. To control the way a program evaluates, we’ll use the &lt;code class=&quot;highlighter-rouge&quot;&gt;if&lt;/code&gt; command. Here’s an example below:&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;So that’s a lot of new stuff right there. We already knew how to assign the value &lt;code class=&quot;highlighter-rouge&quot;&gt;11&lt;/code&gt; to the logical, unique identifier &lt;code class=&quot;highlighter-rouge&quot;&gt;number&lt;/code&gt;. We also know how to reassign the value to a different value, essentially subtracting &lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt; from &lt;code class=&quot;highlighter-rouge&quot;&gt;number&lt;/code&gt;. The &lt;code class=&quot;highlighter-rouge&quot;&gt;if&lt;/code&gt; command is a bit different, however. Follow the specification below to try and write a similar algorithim to multiply a value by 7 if it is greater than 4:&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;comparison&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;something&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;textarea&gt;
-
-
-
-&lt;/textarea&gt;</content><author><name>Matt Hall</name><email>matthew349hall@hotmail.com</email></author><category term="Computer Science" /><category term="js for anyone" /><category term="tutorial" /><summary type="html">This is a continuation of the JavaScript For Anyone tutorial. In this post we will discuss how computer programs compare variables, introduce Boolean logic, and talk about how to make decisions.</summary></entry></feed>
+&lt;p&gt;That’s all for this section. We’ve learned (at a high level) how computers remember, access, and edit values. We’ve covered operators and how they can be used to manipulate the (numerical) values of a given variable. The &lt;a href=&quot;/Computer Science/2018/10/04/js-for-anyone-1&quot;&gt;next post&lt;/a&gt; will discuss how computer programs compare variables, introduce Boolean logic, and talk about how to make decisions.&lt;/p&gt;</content><author><name>Matt Hall</name><email>matthew349hall@hotmail.com</email></author><category term="Computer Science" /><category term="js for anyone" /><category term="tutorial" /><summary type="html">Teaching always seems to help me solidify my understanding of any concept. Also, I work and study with Engineers whose programming education consists of reading the Matlab documentation. I’ve chosen JavaScript as the language of choice for this set of tutorials, specifically Node.js. While plenty of valid criticism of JavaScript exists, it’s not that bad. After all, JavaScript is the most popular language on GitHub by a long shot. This tutorial is written for someone with no programming experience- yet as the target demographic is my college peers, I’m assuming the level of logic and problem-solving skills supposedly present in engineering majors.</summary></entry></feed>

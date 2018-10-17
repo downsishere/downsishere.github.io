@@ -22,14 +22,14 @@ This is a continuation of the [JavaScript For Anyone](tags.html#js-for-anyone) t
 
 Throughout these tutorials I'd like to cover a few things:
 
-1. [Thinking About Memory](/Computer Science/2018/10/04/js-for-anyone-0) (variables, assigment, operators)
-2. [Making Decisions](/Computer Science/2018/10/04/js-for-anyone-1) (comparison, booleans, control flow)
+1. [Thinking About Memory](/computer science/2018/10/04/js-for-anyone-0) (variables, assigment, operators)
+2. [Making Decisions](/computer science/2018/10/04/js-for-anyone-1) (comparison, booleans, control flow)
 3. Repeating (loops, functions)
 4. Beginning Node.js (coming soon)
 5. Syntax (coming soon)
 6. Projects (coming soon)
 
-Access all of the tutorials as they are published [here](tags.html#js-for-anyone).
+Access all of the tutorials as they are published [here](/tags.html#js-for-anyone).
 
 
 

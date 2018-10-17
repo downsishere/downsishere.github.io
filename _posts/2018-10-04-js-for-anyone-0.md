@@ -23,8 +23,8 @@ This tutorial is written for someone with no programming experience- yet as the 
 
 Throughout these tutorials I'd like to cover a few things:
 
-1. [Thinking About Memory](/Computer Science/2018/10/04/js-for-anyone-0) (variables, assigment, operators)
-2. [Making Decisions](/Computer Science/2018/10/04/js-for-anyone-1) (comparison, booleans, control flow)
+1. [Thinking About Memory](/computer science/2018/10/04/js-for-anyone-0) (variables, assigment, operators)
+2. [Making Decisions](/computer science/2018/10/04/js-for-anyone-1) (comparison, booleans, control flow)
 3. Repeating (loops, functions)
 4. Beginning Node.js (coming soon)
 5. Syntax (coming soon)
@@ -156,7 +156,7 @@ As you see, we can assign the value from one variable to any other variable. We 
 
 ## Conclusion
 
-That's all for this section. We've learned (at a high level) how computers remember, access, and edit values. We've covered operators and how they can be used to manipulate the (numerical) values of a given variable. The [next post](/Computer Science/2018/10/04/js-for-anyone-1) will discuss how computer programs compare variables, introduce Boolean logic, and talk about how to make decisions.
+That's all for this section. We've learned (at a high level) how computers remember, access, and edit values. We've covered operators and how they can be used to manipulate the (numerical) values of a given variable. The [next post](/computer science/2018/10/04/js-for-anyone-1) will discuss how computer programs compare variables, introduce Boolean logic, and talk about how to make decisions.
 
 
 
