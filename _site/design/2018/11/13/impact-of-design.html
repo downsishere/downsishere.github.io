@@ -11,7 +11,7 @@
 
   <title>
     
-      Making Decisions &middot; Matt Hall
+      The Impact of Design &middot; Matt Hall
     
   </title>
 
@@ -277,12 +277,12 @@
       
 
 <header>
-  <h1 class="post-title">Making Decisions</h1>
+  <h1 class="post-title">The Impact of Design</h1>
   <p class="post-time">
-<span>JavaScript for Anyone Part 1</span> &bull;
+<span>Design</span> &bull;
 <span>
 
-  4 min read
+  1 min read
 
 </span>
 </p>
@@ -298,14 +298,14 @@
       
 
       
-        <a href="/hydeout/category/computer-science.html">
-          Computer Science
+        <a href="/hydeout/category/design.html">
+          Design
         </a>
       
       &bull;
     
   </span>
-  <span class="post-date">06 Oct 2018</span>
+  <span class="post-date">13 Nov 2018</span>
   <span class="post-author">&bull; 
     <a href="/hydeout/authors/matt">Matt Hall</a>
   </span>
@@ -313,166 +313,8 @@
 
 
   <div class="post-body">
-    <p>This is a continuation of the <a href="tags.html#js-for-anyone">JavaScript For Anyone</a> tutorial. In this post we will discuss how computer programs compare variables, introduce Boolean logic, and talk about how to make decisions.</p>
+    <!--more-->
 
-<!--more-->
-
-<h1 id="series-contents">Series Contents</h1>
-
-<p>Throughout these tutorials I’d like to cover a few things:</p>
-
-<ol>
-  <li><a href="/Computer Science/2018/10/04/js-for-anyone-0">Thinking About Memory</a> (variables, assigment, operators)</li>
-  <li><a href="/Computer Science/2018/10/04/js-for-anyone-1">Making Decisions</a> (comparison, booleans, control flow)</li>
-  <li>Repeating (loops, functions)</li>
-  <li>Beginning Node.js (coming soon)</li>
-  <li>Syntax (coming soon)</li>
-  <li>Projects (coming soon)</li>
-</ol>
-
-<p>Access all of the tutorials as they are published <a href="tags.html#js-for-anyone">here</a>.</p>
-
-<h1 id="in-this-post">In This Post</h1>
-
-<ul>
-  <li><a href="#comparing">Comparing variables and values</a></li>
-  <li><a href="#booleans">The truth of the Boolean</a></li>
-  <li><a href="#control">Control flow</a></li>
-  <li><a href="#blocks">Building Blocks</a></li>
-</ul>
-
-<p><a name="#comparing"></a></p>
-
-<h2 id="comparing-variables-and-values">Comparing Variables and Values</h2>
-
-<p>In the previous post we learned how to conceptualize the creation and editing of variables. So, say we have two variables, <code class="highlighter-rouge">freedom tower floors = 104</code> and <code class="highlighter-rouge">empire state building floors = 102</code>. A program can compare two values by using <em>relational</em> operators.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>symbol</th>
-      <th>name</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>&gt;</td>
-      <td>greater than</td>
-    </tr>
-    <tr>
-      <td>&lt;</td>
-      <td>less than</td>
-    </tr>
-    <tr>
-      <td>&gt;=</td>
-      <td>greater than or equal to</td>
-    </tr>
-    <tr>
-      <td>&lt;=</td>
-      <td>less than or equal to</td>
-    </tr>
-    <tr>
-      <td>==</td>
-      <td>equal to</td>
-    </tr>
-    <tr>
-      <td>!=</td>
-      <td>not equal to</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Notice how programming languages use both <code class="highlighter-rouge">=</code> and <code class="highlighter-rouge">==</code>, yet the do not mean the same thing. We assign values using <code class="highlighter-rouge">=</code> while we can check if a variable’s value is equal to another value by using <code class="highlighter-rouge">==</code> (or <code class="highlighter-rouge">!=</code>).</p>
-
-<blockquote>
-  <p>It’s important to realize that these comparisons work for all types of values such as text, numbers, etc. However, it doesn’t make much sense to say a word is greater than or less than another word so just don’t use <code class="highlighter-rouge">&gt;</code>,<code class="highlighter-rouge">&lt;</code>,<code class="highlighter-rouge">&gt;=</code>, or <code class="highlighter-rouge">&lt;=</code> on text.</p>
-</blockquote>
-
-<p>There isn’t really anything we can do with these relational operators until we talk about another key concept of programming: Booleans.</p>
-
-<p><a name="booleans"></a></p>
-
-<h2 id="the-truth-of-the-boolean">The truth of the Boolean</h2>
-
-<p>There’s another type of value that a variable can be assigned- a <a href="https://en.wikipedia.org/wiki/Boolean_data_type">boolean</a>. Booleans may have only two possible values, <code class="highlighter-rouge">true</code> and <code class="highlighter-rouge">false</code>. You can probably see uses for this in for programs &amp; algorithims as it allows for the programmer to control <strong>if</strong> an action should occur. In most programming languages, the <a href="#comparing">relational operators</a> discussed above evaluate to a boolean value. See the examples below, using the sample variables given above the table:</p>
-
-<p><code class="highlighter-rouge">size = 4</code></p>
-
-<p><code class="highlighter-rouge">squared = 144</code></p>
-
-<p><code class="highlighter-rouge">test = 13</code></p>
-
-<table>
-  <thead>
-    <tr>
-      <th>expression</th>
-      <th>boolean</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>size &gt; 5</td>
-      <td><code class="highlighter-rouge">false</code></td>
-    </tr>
-    <tr>
-      <td>56 &gt;= 7</td>
-      <td><code class="highlighter-rouge">true</code></td>
-    </tr>
-    <tr>
-      <td>(squared / 12) == 12</td>
-      <td><code class="highlighter-rouge">true</code></td>
-    </tr>
-    <tr>
-      <td>test</td>
-      <td><code class="highlighter-rouge">true</code></td>
-    </tr>
-    <tr>
-      <td>167 &lt; 189</td>
-      <td><input type="text" /></td>
-    </tr>
-    <tr>
-      <td>174 != squared</td>
-      <td><input type="text" /></td>
-    </tr>
-    <tr>
-      <td>squared</td>
-      <td><input type="text" /></td>
-    </tr>
-    <tr>
-      <td>test = 13</td>
-      <td><input type="text" /></td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Most of these examples seem pretty straight forward. But why does just <code class="highlighter-rouge">test</code> evaluate to <code class="highlighter-rouge">true</code>? It turns out Booleans are extra handy- then can tell us if a variable exists! This is very useful behavior when working with a large codebase or code that someone might change without you knowing.</p>
-
-<p>So, now that we have the capability to <a href="#comparison">compare</a> the values of our <a href="/computer%20science/2018/10/04/js-for-anyone-0.html#variables">variables</a> with relational operators we need a way to tell our program which way to go.</p>
-
-<p><a name="control"></a></p>
-
-<p>##Control Flow</p>
-
-<p>So let’s say that we have an algorithim that tells us to subtract 1 from a value if it the value is greater than 10. Using only the concepts introduced in the previous sections this is impossible- but we are close. To control the way a program evaluates, we’ll use the <code class="highlighter-rouge">if</code> command. Here’s an example below:</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">number</span> <span class="o">=</span> <span class="mi">11</span>
-<span class="k">if</span> <span class="p">(</span><span class="nx">number</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">number</span> <span class="o">=</span> <span class="nx">number</span> <span class="o">-</span> <span class="mi">1</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>So that’s a lot of new stuff right there. We already knew how to assign the value <code class="highlighter-rouge">11</code> to the logical, unique identifier <code class="highlighter-rouge">number</code>. We also know how to reassign the value to a different value, essentially subtracting <code class="highlighter-rouge">1</code> from <code class="highlighter-rouge">number</code>. The <code class="highlighter-rouge">if</code> command is a bit different, however. Follow the specification below to try and write a similar algorithim to multiply a value by 7 if it is greater than 4:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="n">comparison</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">do</span> <span class="n">something</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<textarea>
-
-
-
-</textarea>
 
     
 
@@ -481,25 +323,14 @@
 <div class="post-tags">
   
     
-    <a href="/hydeout/tags.html#js-for-anyone">
+    <a href="/hydeout/tags.html#design">
     
       <span class="icon">
         <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
 </svg>
-      </span>&nbsp;<span class="tag-name">js for anyone</span>
-    </a>
-  
-    
-    <a href="/hydeout/tags.html#tutorial">
-    
-      <span class="icon">
-        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 0h24v24H0z" fill="none"/>
-    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
-</svg>
-      </span>&nbsp;<span class="tag-name">tutorial</span>
+      </span>&nbsp;<span class="tag-name">design</span>
     </a>
   
 </div>
@@ -523,9 +354,9 @@
   *  https://disqus.com/admin/universalcode/#configuration-variables
   */
   var disqus_config = function () {
-    this.page.url = "http://localhost:4000/hydeout/computer%20science/2018/10/06/js-for-anyone-1.html";
+    this.page.url = "http://localhost:4000/hydeout/design/2018/11/13/impact-of-design.html";
     this.page.identifier = "" ||
-                           "http://localhost:4000/hydeout/computer%20science/2018/10/06/js-for-anyone-1.html";
+                           "http://localhost:4000/hydeout/design/2018/11/13/impact-of-design.html";
   }
   function loadDisqusComments() { // DON'T EDIT BELOW THIS LINE
     var d = document, s = d.createElement('script');
@@ -546,6 +377,15 @@
   <section class="related">
   <h2>Related Posts</h2>
   <ul class="posts-list">
+    
+      <li>
+        <h3>
+          <a href="/hydeout/computer%20science/2018/10/17/js-for-anyone-1.html">
+            Making Decisions
+            <small>17 Oct 2018</small>
+          </a>
+        </h3>
+      </li>
     
       <li>
         <h3>

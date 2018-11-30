@@ -4,7 +4,7 @@ title: About
 sidebar_link: true
 ---
 
-Hello! I'm Matt Hall, a freshman Computer Science and Engineering major at The Ohio State University. Through my projects I'm working to develop skills and understanding in the fields that shape our future.
+Hello! I'm Matt Hall, a freshman Computer Science and Engineering major at The Ohio State University. Through my projects I'm working to develop skills and understanding in the fields that shape our future. Currently available for freelance work and/or internships.
 
 ![image](https://matthall.ml/assets/img/matthall.jpg)
 
