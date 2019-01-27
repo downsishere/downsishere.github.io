@@ -1,6 +1,6 @@
 ---
 layout: category
-title: Politics
+title: Society+Politics
 ---
 
 Another sample category page.

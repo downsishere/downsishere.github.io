@@ -1,6 +1,6 @@
 ---
 layout: category
-title: Design
+title: Science
 ---
 
 Another sample category page.
