@@ -3,10 +3,10 @@ markdown:         kramdown
 highlighter:      rouge
 
 # Setup
-title:            Matt Hall
-tagline:          'Designer & Developer'
-description:      'Designer & developer. Student at <a href="https://osu.edu">OSU</a>. Built <a href="https://github.com/halltech/Beacon">Beacon</a> and <a href="https://github.com/mh15/unsure">Unsure</a>.'
-url:              https://mh15.github.io/matthall
+title:            Connor Downs
+tagline:          'part time blogger, full time idiot'
+description:      'A look into the mind of Connor Downs.'
+url:              https://downsishere.github.io/
 baseurl:          '/'
                   # the optional subpath of your site, e.g. "/blog"
                   # NB: This applies to all pages in your Jekyll site.
@@ -15,7 +15,7 @@ baseurl:          '/'
                   # sidebar_blog_link below.
 
 author:
-  name:           Matt Hall
+  name:           Connor Downs
   url:            https://twitter.com/matthew349hall
 
 paginate:         5
@@ -35,7 +35,7 @@ sidebar_home_link:  true
                                 # to enable a separate blog link.
 
 
-google_analytics: 'UA-110272492-3'
+# google_analytics: 'UA-110272492-3'
 
 disqus:
-  shortname: mh15
+  shortname: downsishere
