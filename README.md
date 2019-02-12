@@ -1,4 +1,22 @@
-# Hydeout
+# The Downs Is Here Official Guide
+Follow this guide as closely as possible and if you run into an error contact me.
+
+## Installation
+Install [git](https://git-scm.com/downloads). Follow the installer defaults, that stuff doesn't matter. This is the piece of software that takes the files from your computer and puts them on the internet.
+
+Next, download and install (Visual Studio Code)[https://code.visualstudio.com/download]. This is the editor that you will use to edit your blog. While it is slightly more difficult than using a platform like Weebly or WIx this is better.
+
+## Setup
+Next, create a folder in a directory somewhere, it doesn't matter where. Name this folder `blog`. Now, click in the file bar of the Windows Explorer and type `cmd` then press enter. A window called the *Terminal* will open. On the left, you will see the directory you opened this Terminal from.
+
+Now, type the following command, pressing enter afterwards:
+`git clone https://github.com/downsishere/downsishere.github.io.git` this command downloads your website from GitHub so you can edit it. You'll only have to do this one time.
+
+Next, open the folder `blog/downsishere.github.io` in Visual Studio Code by using the `File > Open` menu.
+
+
+
+
 
 Hydeout updates the original [Hyde](https://github.com/poole/hyde)
 theme for [Jekyll](http://jekyllrb.com) 3.x and adds new functionality.

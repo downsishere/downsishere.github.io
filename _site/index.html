@@ -33,13 +33,13 @@
 
   <!-- Additional head bits without overriding original head -->
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110272492-3"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133313243-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-110272492-3');
+  gtag('config', 'UA-133313243-1');
 </script>
 
 
@@ -92,10 +92,6 @@
   
 
   
-    
-  
-
-  
 
   
     
@@ -117,6 +113,10 @@
     
   
 
+  
+    
+  
+
 
   
 
@@ -128,20 +128,13 @@
   
 
   
-    
-  
-
-  
-    
-      <a class="category-link "
-          href="/hydeout/category/computer-science.html">Computer Science</a>
     
   
 
   
     
       <a class="category-link "
-          href="/hydeout/category/design.html">Design</a>
+          href="/hydeout/category/entertainment.html">Entertainment</a>
     
   
 
@@ -154,18 +147,25 @@
   
     
       <a class="category-link "
-          href="/hydeout/category/politics.html">Politics</a>
+          href="/hydeout/category/running-health.html">Running+Health</a>
     
   
 
   
     
       <a class="category-link "
-          href="/hydeout/category/projects.html">Projects</a>
+          href="/hydeout/category/science.html">Science</a>
     
   
 
   
+    
+  
+
+  
+    
+      <a class="category-link "
+          href="/hydeout/category/society-politics.html">Society+Politics</a>
     
   
 
@@ -271,7 +271,7 @@
 
   <p>
   
-  <a href="/hydeout/LICENSE.md">&copy; 2018 Matt Hall</a>.
+  <a href="/hydeout/LICENSE.md">&copy; 2019 Connor Downs</a>.
 </p>
 
 </div>
@@ -286,8 +286,8 @@
   
   <article class="post-body">
     <h2 class="post-title">
-      <a href="/hydeout/computer%20science/2018/10/17/js-for-anyone-1.html">
-        Making Decisions
+      <a href="/hydeout/entertainment/2019/01/27/intro.html">
+        An Introduction.
       </a>
     </h2>
     
@@ -300,23 +300,101 @@
       
 
       
-        <a href="/hydeout/category/computer-science.html">
-          Computer Science
+        <a href="/hydeout/category/entertainment.html">
+          Entertainment
         </a>
       
       &bull;
     
   </span>
-  <span class="post-date">17 Oct 2018</span>
-  <span class="post-author">&bull; 
-    <a href="/hydeout/authors/matt">Matt Hall</a>
-  </span>
+  <span class="post-date">27 Jan 2019</span>
+
 </div>
 
 
     
-      <p>This is a continuation of the <a href="tags.html#js-for-anyone">JavaScript For Anyone</a> tutorial. In this post we will discuss how computer programs compare variables, introduce Boolean logic, and talk about how to make decisions.</p>
+      <p>Hydeout updates the original <a href="https://github.com/poole/hyde">Hyde</a>
+theme for <a href="http://jekyllrb.com">Jekyll</a> 3.x and adds new functionality.</p>
 
+<h3 id="keep-it-simple">Keep It Simple</h3>
+
+<p>In keeping with the original Hyde theme, Hydeout aims to keep the overall
+design lightweight and plugin-free. JavaScript is currently limited only
+to Disqus and Google Analytics (and is only loaded if you provide configuration
+variables).</p>
+
+<p>Hydeout makes heavy use of Flexbox in its CSS. If Flexbox is not available,
+the CSS degrades into a single column layout.</p>
+
+<h3 id="customization">Customization</h3>
+
+<p>Hydeout replaces Hyde’s class-based theming with the use
+of the following SASS variables:</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$sidebar-bg-color</span><span class="p">:</span> <span class="mh">#202020</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+<span class="nv">$sidebar-fg-color</span><span class="p">:</span> <span class="no">white</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+<span class="nv">$sidebar-sticky</span><span class="p">:</span> <span class="bp">true</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+<span class="nv">$layout-reverse</span><span class="p">:</span> <span class="bp">false</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+<span class="nv">$link-color</span><span class="p">:</span> <span class="mh">#268bd2</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>To override these variables, create your own <code class="highlighter-rouge">assets/css/main.scss</code> file.
+Define your own variables, then import in Hydeout’s SCSS, like so:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+# Jekyll needs front matter for SCSS files
+---
+
+$sidebar-bg-color: #ac4142;
+$link-color: #ac4142;
+$sidebar-sticky: false;
+@import "hydeout";
+</code></pre></div></div>
+
+<p>See the <a href="https://github.com/fongandrew/hydeout/blob/master/_sass/hydeout/_variables.scss">_variables</a> file for other variables
+you can override.</p>
+
+<p>You can also insert custom head tags (e.g. to load your own stylesheets) by
+defining your own <code class="highlighter-rouge">_includes/custom-head.html</code> or insert tags at the end
+of the body (e.g. for custom JS) by defining your own
+<code class="highlighter-rouge">_includes/custom-foot.html</code>.</p>
+
+<h3 id="new-features">New Features</h3>
+
+<ul>
+  <li>
+    <p>Hydeout also adds a new tags page (accessible in the sidebar) and a new
+“category” layout for dedicated category pages.</p>
+  </li>
+  <li>
+    <p>Category pages are automatically added to the sidebar. All other pages
+must have <code class="highlighter-rouge">sidebar_link: true</code> in their front matter to show up in
+the sidebar.</p>
+  </li>
+  <li>
+    <p>A simple redirect-to-Google search is available. If you want to use
+Google Custom Search or Algolia or something with more involved,
+override the <code class="highlighter-rouge">search.html</code>.</p>
+  </li>
+  <li>
+    <p>Disqus integration is ready out of the box. Just add the following to
+your config file:</p>
+
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">disqus</span><span class="pi">:</span>
+  <span class="na">shortname</span><span class="pi">:</span> <span class="s">my-disqus-shortname</span>
+</code></pre></div>    </div>
+
+    <p>If you don’t want Disqus or want to use something else, override
+<code class="highlighter-rouge">comments.html</code>.</p>
+  </li>
+  <li>
+    <p>For Google Analytics support, define a <code class="highlighter-rouge">google_analytics</code> variable with
+your property ID in your config file.</p>
+  </li>
+</ul>
+
+<p>There’s also a bunch of minor tweaks and adjustments throughout the
+theme. Hope this works for you!</p>
 
     
 
@@ -325,61 +403,6 @@
       
       
 
-      
-        <a href="/hydeout/computer%20science/2018/10/17/js-for-anyone-1.html">More &hellip;</a>
-      
-    
-  </article>
-  
-  <article class="post-body">
-    <h2 class="post-title">
-      <a href="/hydeout/computer%20science/2018/10/04/js-for-anyone-0.html">
-        Thinking About Memory
-      </a>
-    </h2>
-    
-<div class="post-meta">
-  <span class="post-categories">
-    
-
-      
-      
-      
-
-      
-        <a href="/hydeout/category/computer-science.html">
-          Computer Science
-        </a>
-      
-      &bull;
-    
-  </span>
-  <span class="post-date">04 Oct 2018</span>
-  <span class="post-author">&bull; 
-    <a href="/hydeout/authors/matt">Matt Hall</a>
-  </span>
-</div>
-
-
-    
-      <p>Teaching always seems to help me solidify my understanding of any concept. Also, I work and study with Engineers whose programming education consists of reading the Matlab documentation.</p>
-
-<blockquote>
-  <p>I’ve chosen JavaScript as the language of choice for this set of tutorials, specifically <a href="https://nodejs.org/en/">Node.js</a>. While <a href="https://hackernoon.com/the-javascript-phenomenon-is-a-mass-psychosis-57adebb09359">plenty</a> of <a href="https://medium.com/javascript-non-grata/the-top-10-things-wrong-with-javascript-58f440d6b3d8">valid</a> <a href="https://medium.com/javascript-non-grata/javascript-is-a-dysfunctional-programming-language-a1f4866e186f">criticism</a> of JavaScript exists, it’s not <a href="https://hackernoon.com/javascript-a-first-class-language-at-last-209376f69731">that</a> bad. After all, JavaScript is the most popular language on <a href="https://octoverse.github.com">GitHub</a> by a long shot.</p>
-</blockquote>
-
-<p>This tutorial is written for someone with no programming experience- yet as the target demographic is my college peers, I’m assuming the level of logic and problem-solving skills supposedly present in engineering majors.</p>
-
-
-    
-
-    
-      
-      
-      
-
-      
-        <a href="/hydeout/computer%20science/2018/10/04/js-for-anyone-0.html">More &hellip;</a>
       
     
   </article>

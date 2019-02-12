@@ -1,450 +1,82 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/hydeout/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/hydeout/" rel="alternate" type="text/html" /><updated>2018-11-30T15:51:43-05:00</updated><id>http://localhost:4000/hydeout/feed.xml</id><title type="html">Matt Hall</title><subtitle>Designer &amp; developer. Student at &lt;a href=&quot;https://osu.edu&quot;&gt;OSU&lt;/a&gt;. Built &lt;a href=&quot;https://github.com/halltech/Beacon&quot;&gt;Beacon&lt;/a&gt; and &lt;a href=&quot;https://github.com/mh15/unsure&quot;&gt;Unsure&lt;/a&gt;.</subtitle><author><name>Matt Hall</name></author><entry><title type="html">Making Decisions</title><link href="http://localhost:4000/hydeout/computer%20science/2018/10/17/js-for-anyone-1.html" rel="alternate" type="text/html" title="Making Decisions" /><published>2018-10-17T00:00:00-04:00</published><updated>2018-10-17T00:00:00-04:00</updated><id>http://localhost:4000/hydeout/computer%20science/2018/10/17/js-for-anyone-1</id><content type="html" xml:base="http://localhost:4000/hydeout/computer%20science/2018/10/17/js-for-anyone-1.html">&lt;p&gt;This is a continuation of the &lt;a href=&quot;tags.html#js-for-anyone&quot;&gt;JavaScript For Anyone&lt;/a&gt; tutorial. In this post we will discuss how computer programs compare variables, introduce Boolean logic, and talk about how to make decisions.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/hydeout/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/hydeout/" rel="alternate" type="text/html" /><updated>2019-02-11T23:00:28-05:00</updated><id>http://localhost:4000/hydeout/feed.xml</id><title type="html">Matt Hall</title><subtitle>Designer &amp; developer. Student at &lt;a href=&quot;https://osu.edu&quot;&gt;OSU&lt;/a&gt;. Built &lt;a href=&quot;https://github.com/halltech/Beacon&quot;&gt;Beacon&lt;/a&gt; and &lt;a href=&quot;https://github.com/mh15/unsure&quot;&gt;Unsure&lt;/a&gt;.</subtitle><author><name>Matt Hall</name></author><entry><title type="html">An Introduction.</title><link href="http://localhost:4000/hydeout/entertainment/2019/01/27/intro.html" rel="alternate" type="text/html" title="An Introduction." /><published>2019-01-27T00:00:00-05:00</published><updated>2019-01-27T00:00:00-05:00</updated><id>http://localhost:4000/hydeout/entertainment/2019/01/27/intro</id><content type="html" xml:base="http://localhost:4000/hydeout/entertainment/2019/01/27/intro.html">&lt;p&gt;Hydeout updates the original &lt;a href=&quot;https://github.com/poole/hyde&quot;&gt;Hyde&lt;/a&gt;
+theme for &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; 3.x and adds new functionality.&lt;/p&gt;
 
-&lt;!--more--&gt;
+&lt;h3 id=&quot;keep-it-simple&quot;&gt;Keep It Simple&lt;/h3&gt;
 
-&lt;h1 id=&quot;series-contents&quot;&gt;Series Contents&lt;/h1&gt;
+&lt;p&gt;In keeping with the original Hyde theme, Hydeout aims to keep the overall
+design lightweight and plugin-free. JavaScript is currently limited only
+to Disqus and Google Analytics (and is only loaded if you provide configuration
+variables).&lt;/p&gt;
 
-&lt;p&gt;Throughout these tutorials I’d like to cover a few things:&lt;/p&gt;
+&lt;p&gt;Hydeout makes heavy use of Flexbox in its CSS. If Flexbox is not available,
+the CSS degrades into a single column layout.&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;/computer science/2018/10/04/js-for-anyone-0&quot;&gt;Thinking About Memory&lt;/a&gt; (variables, assigment, operators)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/computer science/2018/10/17/js-for-anyone-1&quot;&gt;Making Decisions&lt;/a&gt; (comparison, booleans, control flow)&lt;/li&gt;
-  &lt;li&gt;Repeating (loops, functions)&lt;/li&gt;
-  &lt;li&gt;Beginning Node.js (coming soon)&lt;/li&gt;
-  &lt;li&gt;Syntax (coming soon)&lt;/li&gt;
-  &lt;li&gt;Projects (coming soon)&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h3 id=&quot;customization&quot;&gt;Customization&lt;/h3&gt;
 
-&lt;p&gt;Access all of the tutorials as they are published &lt;a href=&quot;/tags.html#js-for-anyone&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Hydeout replaces Hyde’s class-based theming with the use
+of the following SASS variables:&lt;/p&gt;
 
-&lt;h1 id=&quot;in-this-post&quot;&gt;In This Post&lt;/h1&gt;
+&lt;div class=&quot;language-scss highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$sidebar-bg-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;#202020&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$sidebar-fg-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;white&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$sidebar-sticky&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$layout-reverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$link-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;#268bd2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To override these variables, create your own &lt;code class=&quot;highlighter-rouge&quot;&gt;assets/css/main.scss&lt;/code&gt; file.
+Define your own variables, then import in Hydeout’s SCSS, like so:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+# Jekyll needs front matter for SCSS files
+---
+
+$sidebar-bg-color: #ac4142;
+$link-color: #ac4142;
+$sidebar-sticky: false;
+@import &quot;hydeout&quot;;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;See the &lt;a href=&quot;https://github.com/fongandrew/hydeout/blob/master/_sass/hydeout/_variables.scss&quot;&gt;_variables&lt;/a&gt; file for other variables
+you can override.&lt;/p&gt;
+
+&lt;p&gt;You can also insert custom head tags (e.g. to load your own stylesheets) by
+defining your own &lt;code class=&quot;highlighter-rouge&quot;&gt;_includes/custom-head.html&lt;/code&gt; or insert tags at the end
+of the body (e.g. for custom JS) by defining your own
+&lt;code class=&quot;highlighter-rouge&quot;&gt;_includes/custom-foot.html&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;new-features&quot;&gt;New Features&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;#comparing&quot;&gt;Comparing variables and values&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#booleans&quot;&gt;The truth of the Boolean&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#control&quot;&gt;Control flow&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#blocks&quot;&gt;Building Blocks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Hydeout also adds a new tags page (accessible in the sidebar) and a new
+“category” layout for dedicated category pages.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Category pages are automatically added to the sidebar. All other pages
+must have &lt;code class=&quot;highlighter-rouge&quot;&gt;sidebar_link: true&lt;/code&gt; in their front matter to show up in
+the sidebar.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A simple redirect-to-Google search is available. If you want to use
+Google Custom Search or Algolia or something with more involved,
+override the &lt;code class=&quot;highlighter-rouge&quot;&gt;search.html&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Disqus integration is ready out of the box. Just add the following to
+your config file:&lt;/p&gt;
+
+    &lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;disqus&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;shortname&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;my-disqus-shortname&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;If you don’t want Disqus or want to use something else, override
+&lt;code class=&quot;highlighter-rouge&quot;&gt;comments.html&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;For Google Analytics support, define a &lt;code class=&quot;highlighter-rouge&quot;&gt;google_analytics&lt;/code&gt; variable with
+your property ID in your config file.&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a name=&quot;#comparing&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;comparing-variables-and-values&quot;&gt;Comparing Variables and Values&lt;/h2&gt;
-
-&lt;p&gt;In the previous post we learned how to conceptualize the creation and editing of variables. So, say we have two variables, &lt;code class=&quot;highlighter-rouge&quot;&gt;freedom tower floors = 104&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;empire state building floors = 102&lt;/code&gt;. A program can compare two values by using &lt;em&gt;relational&lt;/em&gt; operators.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;symbol&lt;/th&gt;
-      &lt;th&gt;name&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&amp;gt;&lt;/td&gt;
-      &lt;td&gt;greater than&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&amp;lt;&lt;/td&gt;
-      &lt;td&gt;less than&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&amp;gt;=&lt;/td&gt;
-      &lt;td&gt;greater than or equal to&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&amp;lt;=&lt;/td&gt;
-      &lt;td&gt;less than or equal to&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;==&lt;/td&gt;
-      &lt;td&gt;equal to&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;!=&lt;/td&gt;
-      &lt;td&gt;not equal to&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Notice how programming languages use both &lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt;, yet the do not mean the same thing. We assign values using &lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt; while we can check if a variable’s value is equal to another value by using &lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt; (or &lt;code class=&quot;highlighter-rouge&quot;&gt;!=&lt;/code&gt;).&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;It’s important to realize that these comparisons work for all types of values such as text, numbers, etc. However, it doesn’t make much sense to say a word is greater than or less than another word so just don’t use &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;=&lt;/code&gt;, or &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;=&lt;/code&gt; on text.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;There isn’t really anything we can do with these relational operators until we talk about another key concept of programming: Booleans.&lt;/p&gt;
-
-&lt;p&gt;&lt;a name=&quot;booleans&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;the-truth-of-the-boolean&quot;&gt;The truth of the Boolean&lt;/h2&gt;
-
-&lt;p&gt;There’s another type of value that a variable can be assigned- a &lt;a href=&quot;https://en.wikipedia.org/wiki/Boolean_data_type&quot;&gt;boolean&lt;/a&gt;. Booleans may have only two possible values, &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt;. You can probably see uses for this in for programs &amp;amp; algorithims as it allows for the programmer to control &lt;strong&gt;if&lt;/strong&gt; an action should occur. In most programming languages, the &lt;a href=&quot;#comparing&quot;&gt;relational operators&lt;/a&gt; discussed above evaluate to a boolean value. See the examples below, using the sample variables given above the table:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;size = 4&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;squared = 144&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;test = 13&lt;/code&gt;&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;expression&lt;/th&gt;
-      &lt;th&gt;boolean&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;size &amp;gt; 5&lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;56 &amp;gt;= 7&lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;(squared / 12) == 12&lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;test&lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;167 &amp;lt; 189&lt;/td&gt;
-      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;174 != squared&lt;/td&gt;
-      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;squared&lt;/td&gt;
-      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;test = 13&lt;/td&gt;
-      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Most of these examples seem pretty straight forward. But why does just &lt;code class=&quot;highlighter-rouge&quot;&gt;test&lt;/code&gt; evaluate to &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt;? It turns out Booleans are extra handy- then can tell us if a variable exists! This is very useful behavior when working with a large codebase or code that someone might change without you knowing.&lt;/p&gt;
-
-&lt;p&gt;So, now that we have the capability to &lt;a href=&quot;#comparison&quot;&gt;compare&lt;/a&gt; the values of our &lt;a href=&quot;/computer%20science/2018/10/04/js-for-anyone-0.html#variables&quot;&gt;variables&lt;/a&gt; with relational operators we need a way to tell our program which way to go.&lt;/p&gt;
-
-&lt;p&gt;&lt;a name=&quot;control&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;##Control Flow&lt;/p&gt;
-
-&lt;p&gt;So let’s say that we have an algorithim that tells us to subtract 1 from a value if it the value is greater than 10. Using only the concepts introduced in the previous sections this is impossible- but we are close. To control the way a program evaluates, we’ll use the &lt;code class=&quot;highlighter-rouge&quot;&gt;if&lt;/code&gt; command. Here’s an example below:&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;So that’s a lot of new stuff right there. We already knew how to assign the value &lt;code class=&quot;highlighter-rouge&quot;&gt;11&lt;/code&gt; to the logical, unique identifier &lt;code class=&quot;highlighter-rouge&quot;&gt;number&lt;/code&gt;. We also know how to reassign the value to a different value, essentially subtracting &lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt; from &lt;code class=&quot;highlighter-rouge&quot;&gt;number&lt;/code&gt;. The &lt;code class=&quot;highlighter-rouge&quot;&gt;if&lt;/code&gt; command is a bit different, however. Follow the specification below to try and write a similar algorithim to multiply a value by 7 if it is greater than 4:&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;comparison&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;something&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;textarea&gt;
-
-
-
-&lt;/textarea&gt;</content><author><name>Matt Hall</name><email>matthew349hall@hotmail.com</email></author><category term="Computer Science" /><category term="js for anyone" /><category term="tutorial" /><summary type="html">This is a continuation of the JavaScript For Anyone tutorial. In this post we will discuss how computer programs compare variables, introduce Boolean logic, and talk about how to make decisions.</summary></entry><entry><title type="html">Thinking About Memory</title><link href="http://localhost:4000/hydeout/computer%20science/2018/10/04/js-for-anyone-0.html" rel="alternate" type="text/html" title="Thinking About Memory" /><published>2018-10-04T00:00:00-04:00</published><updated>2018-10-04T00:00:00-04:00</updated><id>http://localhost:4000/hydeout/computer%20science/2018/10/04/js-for-anyone-0</id><content type="html" xml:base="http://localhost:4000/hydeout/computer%20science/2018/10/04/js-for-anyone-0.html">&lt;p&gt;Teaching always seems to help me solidify my understanding of any concept. Also, I work and study with Engineers whose programming education consists of reading the Matlab documentation.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;I’ve chosen JavaScript as the language of choice for this set of tutorials, specifically &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt;. While &lt;a href=&quot;https://hackernoon.com/the-javascript-phenomenon-is-a-mass-psychosis-57adebb09359&quot;&gt;plenty&lt;/a&gt; of &lt;a href=&quot;https://medium.com/javascript-non-grata/the-top-10-things-wrong-with-javascript-58f440d6b3d8&quot;&gt;valid&lt;/a&gt; &lt;a href=&quot;https://medium.com/javascript-non-grata/javascript-is-a-dysfunctional-programming-language-a1f4866e186f&quot;&gt;criticism&lt;/a&gt; of JavaScript exists, it’s not &lt;a href=&quot;https://hackernoon.com/javascript-a-first-class-language-at-last-209376f69731&quot;&gt;that&lt;/a&gt; bad. After all, JavaScript is the most popular language on &lt;a href=&quot;https://octoverse.github.com&quot;&gt;GitHub&lt;/a&gt; by a long shot.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This tutorial is written for someone with no programming experience- yet as the target demographic is my college peers, I’m assuming the level of logic and problem-solving skills supposedly present in engineering majors.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h1 id=&quot;series-contents&quot;&gt;Series Contents&lt;/h1&gt;
-
-&lt;p&gt;Throughout these tutorials I’d like to cover a few things:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;/computer science/2018/10/04/js-for-anyone-0&quot;&gt;Thinking About Memory&lt;/a&gt; (variables, assigment, operators)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/computer science/2018/10/17/js-for-anyone-1&quot;&gt;Making Decisions&lt;/a&gt; (comparison, booleans, control flow)&lt;/li&gt;
-  &lt;li&gt;Repeating (loops, functions)&lt;/li&gt;
-  &lt;li&gt;Beginning Node.js (coming soon)&lt;/li&gt;
-  &lt;li&gt;Syntax (coming soon)&lt;/li&gt;
-  &lt;li&gt;Projects (coming soon)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Access all of the tutorials as they are published &lt;a href=&quot;tags.html#js-for-anyone&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h1 id=&quot;in-this-post&quot;&gt;In This Post&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;#variables&quot;&gt;Remembering with &lt;code class=&quot;highlighter-rouge&quot;&gt;variables&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#operators&quot;&gt;Math with &lt;code class=&quot;highlighter-rouge&quot;&gt;operators&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#assignment&quot;&gt;Working with assignment&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;lets-begin&quot;&gt;Let’s Begin&lt;/h1&gt;
-
-&lt;p&gt;There will be no code here. Instead, we’ll follow a ground-up approach through the building blocks of Computer Science that applies to &lt;strong&gt;most&lt;/strong&gt; programming languages you’ll ever touch. This isn’t a tutorial on Computer Architecture or Web Design or Application Development; instead, it’s an introduction to the building blocks of any computer system.&lt;/p&gt;
-
-&lt;p&gt;&lt;a name=&quot;variables&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;remembering-with-variables&quot;&gt;Remembering with &lt;code class=&quot;highlighter-rouge&quot;&gt;variables&lt;/code&gt;&lt;/h2&gt;
-
-&lt;p&gt;Think of how you remember things- the &lt;strong&gt;name&lt;/strong&gt; of your friend, the &lt;strong&gt;title&lt;/strong&gt; of a book you just read, your &lt;strong&gt;make&lt;/strong&gt; and &lt;strong&gt;model&lt;/strong&gt; of the car you drive. Generally, you wouldn’t remember just “John” or “Animal Farm” or “Hyundai” and “Elantra”. In your memory there’s an identifier attached to each of these values that helps you access them. That’s exactly how a computer works, storing &lt;strong&gt;named values&lt;/strong&gt; so each item may be “remembered” or changed. This is the lowest level of abstraction you’ll probably ever need to know.&lt;/p&gt;
-
-&lt;p&gt;In Computer Science, this is colloquially called a &lt;code class=&quot;highlighter-rouge&quot;&gt;variable&lt;/code&gt;. There’s a two important things to know about variables right now: &lt;strong&gt;assignment&lt;/strong&gt; and &lt;strong&gt;scope&lt;/strong&gt;. Think of assigment as the process of remembering something, creating an identifier and a value. Creating &lt;strong&gt;&lt;em&gt;meaningful&lt;/em&gt;&lt;/strong&gt; identifiers is way more important that one might think. Always create identifiers that logically denote what the matching value actually is. Try and assign some values to custom identifiers following the example below:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;identifier&lt;/th&gt;
-      &lt;th&gt;value&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;name&lt;/td&gt;
-      &lt;td&gt;Matt Hall&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;location&lt;/td&gt;
-      &lt;td&gt;Columbus, Ohio&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;age&lt;/td&gt;
-      &lt;td&gt;18&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Now think about your brain again. There’s certain memories we know no matter what such as your name, age, etc; the simple things that define you. Then think about the more complicated things: your belief system, family history, skills, knowledge, and anything else. Now imagine creating a unique, logical, identifier for every single memory. It sounds impossible, right? That’s where scope comes in. Think of scope as a level of access. In programming, just like in your brain, the basic information is defined in the highest, most accessible scope. Lower scopes should contain lesser information only needed by certain parts of the program. There are two scopes: &lt;strong&gt;global&lt;/strong&gt; and &lt;strong&gt;local&lt;/strong&gt;. Only one global scope may exist, but any number of local scopes can be created. E.g., one local scope could exist for all information on your family members and another local scope might exist for all the things you know about math. For the data below, label each variable &lt;strong&gt;global&lt;/strong&gt; or &lt;strong&gt;local&lt;/strong&gt;. Be warned, this is highly subjective, but as a rule of thumb if a variable is not crucial (needed by the entire system) it’s better to move it to the local scope.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;identifier&lt;/th&gt;
-      &lt;th&gt;value&lt;/th&gt;
-      &lt;th&gt;scope&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;name&lt;/td&gt;
-      &lt;td&gt;John Doe&lt;/td&gt;
-      &lt;td&gt;global&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;age&lt;/td&gt;
-      &lt;td&gt;34&lt;/td&gt;
-      &lt;td&gt;global&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;favorite food&lt;/td&gt;
-      &lt;td&gt;Pizza&lt;/td&gt;
-      &lt;td&gt;local&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Observe how as John Doe’s name and age are likely crucial bits of information about him, they are given the local scope. In contrast, his favorite food is likely a minor detail that can be put in a local scope.&lt;/p&gt;
-
-&lt;p&gt;&lt;a name=&quot;operators&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;math-with-operators&quot;&gt;Math with &lt;code class=&quot;highlighter-rouge&quot;&gt;operators&lt;/code&gt;&lt;/h2&gt;
-
-&lt;p&gt;So we’ve created values and assigned them to unique, relevant identifiers. How do we change them? This is where the brain analogy falls to the wayside, as our brains operate at a higher level than operators do. If you’ve taken any math class &lt;em&gt;ever&lt;/em&gt; you’ve definitely used operators extensively. Many operators exist in mathematics, but the operators needed for basic programs are:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;I’m going to assume you know how to perform the first four operations in the list but the last three are less common outside of programming languages so check out the links if needed.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;symbol&lt;/th&gt;
-      &lt;th&gt;description&lt;/th&gt;
-      &lt;th&gt;example&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;+&lt;/td&gt;
-      &lt;td&gt;addition&lt;/td&gt;
-      &lt;td&gt;a + b&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;subtraction&lt;/td&gt;
-      &lt;td&gt;a - b&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;*&lt;/td&gt;
-      &lt;td&gt;multiplication&lt;/td&gt;
-      &lt;td&gt;a * b&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;/&lt;/td&gt;
-      &lt;td&gt;division&lt;/td&gt;
-      &lt;td&gt;a / b&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;%&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Modulo_operation&quot;&gt;modulus&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt;a % b&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;++&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Increment_and_decrement_operators&quot;&gt;increment&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt;a++&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;–&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Increment_and_decrement_operators&quot;&gt;decrement&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt;b–&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;When working with code, it helps to be able to quickly perform various operations in your head. Do that below:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;expression&lt;/th&gt;
-      &lt;th&gt;result&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;4 + 78&lt;/td&gt;
-      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;8 % 2&lt;/td&gt;
-      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;14 / 7&lt;/td&gt;
-      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;19 % 4&lt;/td&gt;
-      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;81 * 3&lt;/td&gt;
-      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;1927 - 58&lt;/td&gt;
-      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;So that’s neat. But we still don’t know how to change the value that we previously assigned to a logical, unique identifier. In fact, we don’t even know how to assign a value at all. Luckily, there’s a concept called &lt;code class=&quot;highlighter-rouge&quot;&gt;assignment&lt;/code&gt; that handles that quite well.&lt;/p&gt;
-
-&lt;p&gt;&lt;a name=&quot;assignment&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;working-with-assignment&quot;&gt;Working with assignment&lt;/h2&gt;
-
-&lt;p&gt;So we talked for a while about the logical, unique identifiers and values of variables but never explicity created them. By convention, the &lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt; symbol (equals sign) denotes the assigment of a value to a logical, unique identifier. Everything to the left of &lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt; is the identifier and everything to the right is the value.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;identifier = value&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;temperature = 84&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;name = Fred&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;I know it’s very easy, but what is the value of &lt;code class=&quot;highlighter-rouge&quot;&gt;name&lt;/code&gt; ? of &lt;code class=&quot;highlighter-rouge&quot;&gt;temperature&lt;/code&gt;? We can call these the &lt;strong&gt;initial values&lt;/strong&gt;. Now, let’s create a variable with an initial value and then assign a new value to the same logical, unique identifier.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;city&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Dayton&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;city&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Columbus&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;After those two assignments, what’s the value assigned to &lt;code class=&quot;highlighter-rouge&quot;&gt;city name&lt;/code&gt;? If you guessed Dayton, you are wrong. A second assignment completely replaces the original assignment. So what if we combine &lt;code class=&quot;highlighter-rouge&quot;&gt;operators&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;assignment&lt;/code&gt;? While all the examples in the &lt;a href=&quot;#operators&quot;&gt;operators&lt;/a&gt; section used numbers, all operators work just as well with variables.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;In case you didn’t figure it out, operators can’t only be used on anything but &lt;em&gt;numbers&lt;/em&gt; (except when they can, but we’ll get to that later)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The assigments below create three variables then change the third’s value to the sum of the first two’s values.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;one&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;two&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;18&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;three&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;one&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;two&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;That was pretty straightforward. Here’s some more complicated practice below- fill out the table to&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;code&lt;/th&gt;
-      &lt;th&gt;value of &lt;code class=&quot;highlighter-rouge&quot;&gt;final&lt;/code&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;final = 4&lt;/td&gt;
-      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;number = 123&lt;/td&gt;
-      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;final = 56 + number&lt;/td&gt;
-      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;final = final–&lt;/td&gt;
-      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;number = final++&lt;/td&gt;
-      &lt;td&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;As you see, we can assign the value from one variable to any other variable. We can also use any operator on a combination of numbers and variables. Remember, operators can only be used on &lt;em&gt;numbers&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;That’s all for this section. We’ve learned (at a high level) how computers remember, access, and edit values. We’ve covered operators and how they can be used to manipulate the (numerical) values of a given variable. The &lt;a href=&quot;/computer science/2018/10/17/js-for-anyone-1&quot;&gt;next post&lt;/a&gt; will discuss how computer programs compare variables, introduce Boolean logic, and talk about how to make decisions.&lt;/p&gt;</content><author><name>Matt Hall</name><email>matthew349hall@hotmail.com</email></author><category term="Computer Science" /><category term="js for anyone" /><category term="tutorial" /><summary type="html">Teaching always seems to help me solidify my understanding of any concept. Also, I work and study with Engineers whose programming education consists of reading the Matlab documentation. I’ve chosen JavaScript as the language of choice for this set of tutorials, specifically Node.js. While plenty of valid criticism of JavaScript exists, it’s not that bad. After all, JavaScript is the most popular language on GitHub by a long shot. This tutorial is written for someone with no programming experience- yet as the target demographic is my college peers, I’m assuming the level of logic and problem-solving skills supposedly present in engineering majors.</summary></entry></feed>
+&lt;p&gt;There’s also a bunch of minor tweaks and adjustments throughout the
+theme. Hope this works for you!&lt;/p&gt;</content><author><name>Matt Hall</name></author><category term="Entertainment" /><category term="intro" /><summary type="html">Hydeout updates the original Hyde theme for Jekyll 3.x and adds new functionality. Keep It Simple In keeping with the original Hyde theme, Hydeout aims to keep the overall design lightweight and plugin-free. JavaScript is currently limited only to Disqus and Google Analytics (and is only loaded if you provide configuration variables). Hydeout makes heavy use of Flexbox in its CSS. If Flexbox is not available, the CSS degrades into a single column layout. Customization Hydeout replaces Hyde’s class-based theming with the use of the following SASS variables: $sidebar-bg-color: #202020 !default; $sidebar-fg-color: white !default; $sidebar-sticky: true !default; $layout-reverse: false !default; $link-color: #268bd2 !default; To override these variables, create your own assets/css/main.scss file. Define your own variables, then import in Hydeout’s SCSS, like so: --- # Jekyll needs front matter for SCSS files --- $sidebar-bg-color: #ac4142; $link-color: #ac4142; $sidebar-sticky: false; @import &quot;hydeout&quot;; See the _variables file for other variables you can override. You can also insert custom head tags (e.g. to load your own stylesheets) by defining your own _includes/custom-head.html or insert tags at the end of the body (e.g. for custom JS) by defining your own _includes/custom-foot.html. New Features Hydeout also adds a new tags page (accessible in the sidebar) and a new “category” layout for dedicated category pages. Category pages are automatically added to the sidebar. All other pages must have sidebar_link: true in their front matter to show up in the sidebar. A simple redirect-to-Google search is available. If you want to use Google Custom Search or Algolia or something with more involved, override the search.html. Disqus integration is ready out of the box. Just add the following to your config file: disqus: shortname: my-disqus-shortname If you don’t want Disqus or want to use something else, override comments.html. For Google Analytics support, define a google_analytics variable with your property ID in your config file. There’s also a bunch of minor tweaks and adjustments throughout the theme. Hope this works for you!</summary></entry></feed>
